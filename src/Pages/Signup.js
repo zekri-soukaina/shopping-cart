@@ -4,7 +4,15 @@ import { Link } from "react-router-dom";
 
 export default function Signup() {
   return (
-    <div style={{ width: "500px", marginLeft: "25%", marginTop: "100px" }}>
+    <div
+      style={{
+        width: "500px",
+        marginLeft: "20%",
+        marginTop: "100px",
+        boxShadow: "2px 8px 20px #ddd",
+        padding: "20px",
+        borderRadius: "10px",
+      }}>
       <Form>
         <Form.Row>
           <Form.Group as={Col} controlId="formGridFName">

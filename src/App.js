@@ -4,6 +4,7 @@ import HomePage from "./Pages/HomePage";
 import NavBar from "./Components/NavBar";
 import Signup from "./Pages/Signup";
 import Login from "./Pages/Login";
+import ProductsPage from "./Pages/ProductsPage";
 const { Switch, Route } = require("react-router-dom");
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/details" component={DetailsPage} />
+        <Route exact path="/details" component={ProductsPage} />
+        <Route path="/details/:id" component={DetailsPage} />
         <Route path="/cart" component={CartPage} />
         <Route path="/signup" component={Signup} />
         <Route path="/login" component={Login} />
