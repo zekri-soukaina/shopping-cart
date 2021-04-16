@@ -3,21 +3,37 @@ import { Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./CardItem.css";
 
-export default function CardItem({ id, image, title, description, price }) {
+export default function CardItem({
+  id,
+  image,
+  title,
+  description,
+  price,
+  addToCart,
+}) {
   return (
-    <div style={{ margin: "10px" }}>
+    <div>
       <Card
         style={{
           width: "18rem",
           borderRadius: "20px",
-          height: "100%",
+          height: "90%",
         }}
         className="shadow-lg p-3 mb-5 bg-white">
         <Link to={`/details/${id}`}>
           <Card.Img variant="top" src={image} />{" "}
         </Link>
         <Card.Body>
-          <Card.Title>{title}</Card.Title>
+          <Link to={`/details/${id}`}>
+            <Card.Title
+              style={{
+                color: "black",
+                textDecoration: "none",
+                textTransform: " uppercase",
+              }}>
+              {title}
+            </Card.Title>
+          </Link>
           <Card.Text className="container">{description}</Card.Text>
 
           <p>
@@ -25,6 +41,7 @@ export default function CardItem({ id, image, title, description, price }) {
           </p>
         </Card.Body>{" "}
         <Button
+          onClick={() => addToCart(id)}
           variant="primary"
           style={{
             marginBottom: "0",

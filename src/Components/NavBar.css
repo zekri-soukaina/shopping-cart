@@ -1,4 +1,8 @@
 header {
+  /* position: fixed;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  z-index: 99; */
   min-height: 70px;
   display: flex;
   justify-content: space-around;
@@ -34,10 +38,10 @@ nav .nav-cart {
 }
 nav .nav-cart span {
   position: absolute;
-  top: 24px;
-  right: 37px;
+  top: 18px;
+  right: 30px;
   background: crimson;
-  font-size: 10px;
+  font-size: 15px;
   color: white;
   padding: 3px 5px;
   border-radius: 50%;
