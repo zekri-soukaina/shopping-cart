@@ -30,7 +30,6 @@ export function ContextProvider({ children }) {
   // console.log("product", product);
 
   const [stateCart, setState] = useState({ cart: [], total: 0 });
-  // console.log("statecart", stateCart);
 
   //function to add item to cart and to check to not add it twice
   const addToCart = (id) => {
@@ -43,7 +42,6 @@ export function ContextProvider({ children }) {
       const data = product.filter((item) => {
         return item.id === id;
       });
-
       setState({ cart: [...cart, ...data] });
     } else {
       alert("THE PRODUCT HAS BEEN ADDED TO THE CART");
@@ -124,6 +122,7 @@ export function ContextProvider({ children }) {
     <DataContext.Provider
       value={{
         items,
+        stateCart,
         cart,
         total,
         product,

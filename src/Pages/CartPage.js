@@ -17,7 +17,8 @@ export default function CartPage() {
 
   useEffect(() => {
     getTotal();
-  }, []);
+  }, [getTotal]);
+  // useEffect(getTotal, []);
 
   if (cart.length === 0) {
     return <h2 style={{ textAlign: "center" }}>Cart empty </h2>;

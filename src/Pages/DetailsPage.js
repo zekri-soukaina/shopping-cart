@@ -10,7 +10,6 @@ export default function DetailsPage() {
 
   const id = encodeURIComponent(routeParams.id);
 
-  // console.log(id);
   const [items, setItems] = useState([]);
 
   useEffect(() => {

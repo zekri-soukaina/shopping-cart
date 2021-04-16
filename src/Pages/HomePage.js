@@ -12,7 +12,7 @@ export default function Homepage() {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(`https://fakestoreapi.com/products`);
-      // console.log("DATA", response.data);
+
       setItems(response.data);
     };
     fetchData();
@@ -20,7 +20,6 @@ export default function Homepage() {
 
   const sorting = (e) => {
     const res = e.target.value;
-    // console.log(res);
     const filterbyCategory = items.filter((item) => {
       return item.category.replace(/ /g, "_") === res;
     });
